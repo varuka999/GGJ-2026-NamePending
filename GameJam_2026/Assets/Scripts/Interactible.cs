@@ -17,6 +17,7 @@ public abstract class Interactible : MonoBehaviour
     {
         if (interactionTimer <= 0)
         {
+            interactionTimer = 0;
             OnInteract();
             interactionTimer = interactionCooldown;
             return true;

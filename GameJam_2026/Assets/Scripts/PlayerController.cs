@@ -26,7 +26,6 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("X", 0);
         animator.SetFloat("Y", 0);
         animator.SetBool("isMoving", false);
-        interactAction.performed += buttonpressed;
         interactAction.performed += OnInteract;
     }
 
@@ -108,11 +107,6 @@ public class PlayerController : MonoBehaviour
         {
             interactibles.Remove(interactible);
         }
-    }
-
-    void buttonpressed(InputAction.CallbackContext context)
-    {
-        Debug.Log("test");
     }
 
     void OnInteract(InputAction.CallbackContext context)
