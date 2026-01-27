@@ -51,7 +51,6 @@ public class PlayerController : MonoBehaviour
 
         ChangeAnimationDirection(moveInput);
         
-
         Vector3 direction = moveInput.normalized;
         rb.linearVelocity = direction * moveSpeed;
 
@@ -90,18 +89,15 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("trigger entered");
         Interactible interactible = collision.gameObject.GetComponent<Interactible>();
         if (interactible != null)
         {
             interactibles.Add(interactible);
-            Debug.Log("interactible found");
         }
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("trigger exited");
         Interactible interactible = collision.gameObject.GetComponent<Interactible>();
         if (interactible != null)
         {
