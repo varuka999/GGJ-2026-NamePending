@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -12,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb = null;
     private Animator animator = null;
     private Vector2 animatorDirection = Vector2.down;
+    private List<Interactible> interactibles = new List<Interactible>();
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -24,6 +26,7 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("X", 0);
         animator.SetFloat("Y", 0);
         animator.SetBool("isMoving", false);
+        interactAction.performed += OnInteract;
     }
 
     void OnEnable()
@@ -50,7 +53,6 @@ public class PlayerController : MonoBehaviour
         
 
         Vector3 direction = moveInput.normalized;
-        Debug.Log(moveInput);
         rb.linearVelocity = direction * moveSpeed;
 
     }
@@ -84,5 +86,43 @@ public class PlayerController : MonoBehaviour
 
         animator.SetFloat("X", animatorDirection.x);
         animator.SetFloat("Y", animatorDirection.y);
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("trigger entered");
+        Interactible interactible = collision.gameObject.GetComponent<Interactible>();
+        if (interactible != null)
+        {
+            interactibles.Add(interactible);
+            Debug.Log("interactible found");
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        Debug.Log("trigger exited");
+        Interactible interactible = collision.gameObject.GetComponent<Interactible>();
+        if (interactible != null)
+        {
+            interactibles.Remove(interactible);
+        }
+    }
+
+    void OnInteract(InputAction.CallbackContext context)
+    {
+        Debug.Log("interact");
+        bool interacted = false;
+        foreach (Interactible interactible in interactibles)
+        {
+            if (interactible.StartInteract())
+            {
+                interacted = true;
+            }
+        }
+        if (interacted)
+        {
+            //start interact animation here
+        }
     }
 }
