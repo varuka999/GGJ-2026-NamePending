@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float moveSpeed = 8.0f;
     private Rigidbody2D rb = null;
     private Animator animator = null;
+    private BoxCollider2D box = null;
+
     private Vector3 animatorDirection = Vector2.down;
     private List<Interactible> interactibles = new List<Interactible>();
     [SerializeField] private bool detectiveUnlocked = false;
@@ -20,7 +22,9 @@ public class PlayerController : MonoBehaviour
     //ghost dash stuff
     [SerializeField] private bool dashUnlocked = false;
     [SerializeField] float dashDistance = 3.5f;
+    [SerializeField] float dashSpeed = 12.0f;
     private Vector3 dashDestination = new Vector3(0,0,-1);
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -31,6 +35,7 @@ public class PlayerController : MonoBehaviour
         dashAction = input.Player.Dash;
 
         rb = GetComponent<Rigidbody2D>();
+        box = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
         animator.SetFloat("X", 0);
         animator.SetFloat("Y", 0);
@@ -58,14 +63,28 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Movement code
-        Vector2 moveInput = moveAction.ReadValue<Vector2>();
+        if (IsDashing())
+        {
+            rb.linearVelocity = Vector2.zero;
+            transform.position = Vector3.MoveTowards(transform.position, dashDestination, dashSpeed*Time.deltaTime);
+            if(transform.position == dashDestination)
+            {
+                //end dash
+                dashDestination = new Vector3(0,0,-1);
+                rb.simulated = true;
+            }
+        }
+        else
+        {
+            
+            //Movement code
+            Vector2 moveInput = moveAction.ReadValue<Vector2>();
 
-        ChangeAnimationDirection(moveInput);
-        
-        Vector3 direction = moveInput.normalized;
-        rb.linearVelocity = direction * moveSpeed;
-
+            ChangeAnimationDirection(moveInput);
+            
+            Vector3 direction = moveInput.normalized;
+            rb.linearVelocity = direction * moveSpeed;
+        }
     }
 
 
@@ -133,15 +152,27 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public bool IsDashing()
+    {
+        return !(dashDestination.z == -1);
+    }
+
     void OnDash(InputAction.CallbackContext context)
     {
-        if (dashUnlocked)
+        if (dashUnlocked && !IsDashing())
         {            
             Vector2 point = transform.position + (dashDistance*animatorDirection);
-            if(!Physics2D.OverlapBox(point,Vector2.one,0.0f))
+            point += box.offset;
+            Vector2 hitboxSize = box.size;
+            if(!Physics2D.OverlapBox(point,hitboxSize,0.0f))
             {
-                //destination is valid
-                
+                //start dash
+                dashDestination.x = point.x;
+                dashDestination.y = point.y;
+                dashDestination.z = 0;
+
+                rb.linearVelocity = Vector2.zero;
+                rb.simulated = false;
             }
             else
             {
