@@ -9,11 +9,18 @@ public class PlayerController : MonoBehaviour
     private PlayerInput input = null;
     private InputAction moveAction = null;
     private InputAction interactAction = null;
+    private InputAction dashAction = null;
     [SerializeField] float moveSpeed = 8.0f;
     private Rigidbody2D rb = null;
     private Animator animator = null;
-    private Vector2 animatorDirection = Vector2.down;
+    private Vector3 animatorDirection = Vector2.down;
     private List<Interactible> interactibles = new List<Interactible>();
+    [SerializeField] private bool detectiveUnlocked = false;
+
+    //ghost dash stuff
+    [SerializeField] private bool dashUnlocked = false;
+    [SerializeField] float dashDistance = 3.5f;
+    private Vector3 dashDestination = new Vector3(0,0,-1);
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -21,12 +28,15 @@ public class PlayerController : MonoBehaviour
         input = new PlayerInput();
         moveAction = input.Player.Move;
         interactAction = input.Player.Interact;
+        dashAction = input.Player.Dash;
+
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         animator.SetFloat("X", 0);
         animator.SetFloat("Y", 0);
         animator.SetBool("isMoving", false);
         interactAction.performed += OnInteract;
+        dashAction.performed += OnDash;
     }
 
     void OnEnable()
@@ -34,6 +44,7 @@ public class PlayerController : MonoBehaviour
         input.Enable();
         moveAction.Enable();
         interactAction.Enable();
+        dashAction.Enable();
     }
 
     void OnDisable()
@@ -41,6 +52,7 @@ public class PlayerController : MonoBehaviour
         input.Disable();
         moveAction.Disable();
         interactAction.Disable();
+        dashAction.Disable();
     }
 
     // Update is called once per frame
@@ -51,7 +63,6 @@ public class PlayerController : MonoBehaviour
 
         ChangeAnimationDirection(moveInput);
         
-
         Vector3 direction = moveInput.normalized;
         rb.linearVelocity = direction * moveSpeed;
 
@@ -90,18 +101,15 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("trigger entered");
         Interactible interactible = collision.gameObject.GetComponent<Interactible>();
         if (interactible != null)
         {
             interactibles.Add(interactible);
-            Debug.Log("interactible found");
         }
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("trigger exited");
         Interactible interactible = collision.gameObject.GetComponent<Interactible>();
         if (interactible != null)
         {
@@ -111,7 +119,6 @@ public class PlayerController : MonoBehaviour
 
     void OnInteract(InputAction.CallbackContext context)
     {
-        Debug.Log("interact");
         bool interacted = false;
         foreach (Interactible interactible in interactibles)
         {
@@ -123,6 +130,23 @@ public class PlayerController : MonoBehaviour
         if (interacted)
         {
             //start interact animation here
+        }
+    }
+
+    void OnDash(InputAction.CallbackContext context)
+    {
+        if (dashUnlocked)
+        {            
+            Vector2 point = transform.position + (dashDistance*animatorDirection);
+            if(!Physics2D.OverlapBox(point,Vector2.one,0.0f))
+            {
+                //destination is valid
+                
+            }
+            else
+            {
+                //destination is not valid
+            }
         }
     }
 }
