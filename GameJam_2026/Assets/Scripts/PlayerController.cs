@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private InputAction interactAction = null;
     private InputAction abilityAction = null;
     private InputAction cycleMaskAction = null;
+    private InputAction clickAction = null;
 
 
     [SerializeField] float moveSpeed = 8.0f;
@@ -52,6 +53,7 @@ public class PlayerController : MonoBehaviour
         interactAction = input.Player.Interact;
         abilityAction = input.Player.Ability;
         cycleMaskAction = input.Player.CycleMask;
+        clickAction = input.Player.Click;
 
         rb = GetComponent<Rigidbody2D>();
         box = GetComponent<BoxCollider2D>();
@@ -62,6 +64,7 @@ public class PlayerController : MonoBehaviour
         interactAction.performed += OnInteract;
         abilityAction.performed += OnAbility;
         cycleMaskAction.performed += OnCycleMask;
+        clickAction.performed += OnClick;
         ownedMasks.Add(MaskType.None);
 
         //just for testing
@@ -76,6 +79,7 @@ public class PlayerController : MonoBehaviour
         interactAction.Enable();
         abilityAction.Enable();
         cycleMaskAction.Enable();
+        clickAction.Enable();
     }
 
     void OnDisable()
@@ -85,6 +89,7 @@ public class PlayerController : MonoBehaviour
         interactAction.Disable();
         abilityAction.Disable();
         cycleMaskAction.Disable();
+        clickAction.Disable();
     }
 
     // Update is called once per frame
@@ -246,7 +251,34 @@ public class PlayerController : MonoBehaviour
 
     void OnCycleMask(InputAction.CallbackContext context)
     {
-        currentMaskIndex = (currentMaskIndex + 1) % ownedMasks.Count;
-        Debug.Log(GetCurrentMask());
+        if (!IsDashing())
+        {
+            inDetectiveMode = false;
+            currentMaskIndex = (currentMaskIndex + 1) % ownedMasks.Count;
+            Debug.Log(GetCurrentMask());
+        }
+    }
+
+    void OnClick(InputAction.CallbackContext context)
+    {
+        if (inDetectiveMode)
+        {
+            Vector2 mouseScreenPos = Mouse.current.position.ReadValue();
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(mouseScreenPos);
+
+            Collider2D[] objectsHit = Physics2D.OverlapPointAll(mousePos);
+
+            foreach (Collider2D collider in objectsHit)
+            {
+                Clue clue = collider.gameObject.GetComponent<Clue>();
+                if (clue != null)
+                {
+                    if (clue.GetActive())
+                    {
+                        clue.OnInteract();
+                    }
+                }
+            }
+        }
     }
 }
