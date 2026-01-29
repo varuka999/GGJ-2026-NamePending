@@ -8,10 +8,12 @@ public abstract class Clue : MonoBehaviour
 
     bool visibleHighlight = false;
 
+    [SerializeField] bool visibleAfterInteract = true;
+    bool revealed = false;
+
     protected virtual void Awake()
     {
         GetComponent<SpriteRenderer>().material = Resources.Load<Material>("MasterShader");
-        material = GetComponent<SpriteRenderer>().material;
         SetActive(active);
     }
 
@@ -28,6 +30,10 @@ public abstract class Clue : MonoBehaviour
 
     public void SetActive(bool isActive)
     {
+        if (active && !isActive && visibleAfterInteract)
+        {
+            revealed = true;
+        }
         active = isActive;
         UpdateHighlight();
     }
@@ -36,6 +42,7 @@ public abstract class Clue : MonoBehaviour
     {
         if (active && (visibleHighlight != GameManager.Instance.GetDetectiveView()))
         {
+            material = GetComponent<SpriteRenderer>().material;
             visibleHighlight = GameManager.Instance.GetDetectiveView();
             if (visibleHighlight)
             {
@@ -57,11 +64,23 @@ public abstract class Clue : MonoBehaviour
         //can override this to have more interesting highlight effects
         //just make sure to also override EndHighlight to disable them
         material.SetInt("_Outline",1);
+        material.SetInt("_Saturation",0);
     }
 
     protected virtual void EndHighlight()
     {
-        material.SetInt("_Outline",0);
+        
+        if (revealed)
+        {
+            //just disable outline
+            material.SetInt("_Outline",0);
+        }
+        else
+        {
+            //set back to default material
+            material = GameManager.Instance.GetMaterial();
+            GetComponent<SpriteRenderer>().material = material;
+        }
     }
 
     public abstract void OnInteract();
