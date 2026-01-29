@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -98,13 +97,15 @@ public class PlayerController : MonoBehaviour
         if (IsDashing())
         {
             rb.linearVelocity = Vector2.zero;
-            transform.position = Vector3.MoveTowards(transform.position, dashDestination, dashSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, dashDestination, dashSpeed*Time.deltaTime);
+
             if (transform.position == dashDestination)
             {
                 //end dash
                 dashDestination = new Vector3(0, 0, -1);
                 rb.simulated = true;
             }
+
         }
         else if (inDetectiveMode)
         {
@@ -118,42 +119,11 @@ public class PlayerController : MonoBehaviour
             //Movement code
             Vector2 moveInput = moveAction.ReadValue<Vector2>();
 
-            ChangeAnimationDirection(moveInput);
+            AnimationDirectionCheck("Move");
 
-            Vector3 direction = moveInput.normalized;
+            Vector3 direction = moveInput.normalized; // where player is 
             rb.linearVelocity = direction * moveSpeed;
         }
-    }
-
-
-
-    void ChangeAnimationDirection(Vector2 moveInput)
-    {
-        if (moveInput.y == 1 || moveInput.y == -1)
-        {
-            Vector3 direction = Vector3.zero;
-            direction.y += moveInput.y;
-            animatorDirection = direction;
-        }
-
-        else if (moveInput.x == 1 || moveInput.x == -1)
-        {
-            Vector3 direction = Vector3.zero;
-            direction.x += moveInput.x;
-            animatorDirection = direction;
-        }
-
-        if (moveInput == Vector2.zero)
-        {
-            animator.SetBool("isMoving", false);
-        }
-        else
-        {
-            animator.SetBool("isMoving", true);
-        }
-
-        animator.SetFloat("X", animatorDirection.x);
-        animator.SetFloat("Y", animatorDirection.y);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -184,11 +154,14 @@ public class PlayerController : MonoBehaviour
                 interacted = true;
             }
         }
+
         if (interacted)
         {
-            //start interact animation here
+          AnimationDirectionCheck("Interact");
         }
     }
+
+
 
     public bool IsDashing()
     {
@@ -205,6 +178,7 @@ public class PlayerController : MonoBehaviour
             if (!Physics2D.OverlapBox(point, hitboxSize, 0.0f))
             {
                 //start dash
+                AnimationDirectionCheck("Dash");
                 point -= box.offset;
                 dashDestination.x = point.x;
                 dashDestination.y = point.y;
@@ -279,4 +253,60 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    void AnimationDirectionCheck(string animationName) 
+    {
+        Vector2 moveInput = moveAction.ReadValue<Vector2>(); // find players direction
+
+        if (moveInput.y == 1 || moveInput.y == -1) // up or down
+        {
+            Vector3 direction = Vector3.zero;
+            direction.y += moveInput.y;
+            animatorDirection = direction;
+        } 
+
+        else if (moveInput.x == 1 || moveInput.x == -1) // left or right
+        {
+            Vector3 direction = Vector3.zero;
+            direction.x += moveInput.x;
+            animatorDirection = direction;
+        } 
+
+        switch (animationName) 
+        {
+            case "Interact":
+                animator.SetFloat("X", animatorDirection.x);
+                animator.SetFloat("Y", animatorDirection.y);
+                animator.SetTrigger("Touch");
+                break;
+
+            case "Dash":
+                animator.SetFloat("X", animatorDirection.x);
+                animator.SetFloat("Y", animatorDirection.y);
+                animator.SetTrigger("Dash");
+                break;
+
+             case "Move":
+
+                if (moveInput == Vector2.zero)
+                {
+                    animator.SetBool("isMoving", false);
+                }
+                else
+                {
+                    animator.SetBool("isMoving", true);
+                }
+
+                animator.SetFloat("X", animatorDirection.x);
+                animator.SetFloat("Y", animatorDirection.y);
+
+
+                break;
+
+
+            default:
+                break;
+        }
+    }
+
 }
