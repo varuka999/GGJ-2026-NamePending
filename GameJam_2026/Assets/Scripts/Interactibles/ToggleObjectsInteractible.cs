@@ -9,8 +9,8 @@ public class ToggleObjectsInteractible : Interactible
     public override void OnInteract()
     {
         foreach (GameObject i in toggleObjects)
-        {
-            i.SetActive(!i.activeSelf);
+         {
+           i.SetActive(!i.activeSelf);
         }
     }
 }
