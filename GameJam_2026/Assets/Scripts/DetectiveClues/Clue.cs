@@ -11,6 +11,8 @@ public abstract class Clue : MonoBehaviour
 
     bool visibleHighlight = false;
 
+    [SerializeField] string textWhenClicked = "";
+
     [SerializeField] protected bool visibleOutsideDetective = true;
 
     [SerializeField] bool hideAfterInteract = false;
@@ -99,6 +101,16 @@ public abstract class Clue : MonoBehaviour
             material = GameManager.Instance.GetMaterial();
             GetComponent<SpriteRenderer>().material = material;
         }
+    }
+
+    public virtual void StartInteract()
+    {
+        if (textWhenClicked != "")
+        {
+            //Show text with UI
+            Debug.Log(textWhenClicked);
+        }
+        OnInteract();
     }
 
     public abstract void OnInteract();

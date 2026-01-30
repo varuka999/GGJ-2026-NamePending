@@ -7,6 +7,9 @@ public abstract class Interactible : MonoBehaviour
     private float interactionTimer = 0.0f;
 
     [SerializeField] protected bool onlyHighlightWhenInContact = true;
+
+    [SerializeField] protected string textOnInteract = "";
+
     Material material = null;
 
     protected virtual void Update()
@@ -52,6 +55,11 @@ public abstract class Interactible : MonoBehaviour
             interactionTimer = 0;
             OnInteract();
             interactionTimer = interactionCooldown;
+            if (textOnInteract != "")
+            {   
+                Debug.Log(textOnInteract);
+            }
+
             return true;
         }
         return false;

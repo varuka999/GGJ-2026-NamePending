@@ -248,7 +248,7 @@ public class PlayerController : MonoBehaviour
                 {
                     if (clue.GetActive())
                     {
-                        clue.OnInteract();
+                        clue.StartInteract();
                     }
                 }
             }
