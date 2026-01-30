@@ -1,5 +1,5 @@
-using System;
 using System.Collections.Generic;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour
     private InputAction abilityAction = null;
     private InputAction cycleMaskAction = null;
     private InputAction clickAction = null;
-
 
     [SerializeField] float moveSpeed = 8.0f;
 
@@ -43,9 +42,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float dashSpeed = 12.0f;
     private Vector3 dashDestination = new Vector3(0, 0, -1);
 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Awake()
+    public void Initialize(GameObject cinemachinePrefab)
     {
         input = new PlayerInput();
         moveAction = input.Player.Move;
@@ -57,22 +54,28 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         box = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
-        animator.SetFloat("X", 0);
-        animator.SetFloat("Y", 0);
-        animator.SetBool("isMoving", false);
         interactAction.performed += OnInteract;
         abilityAction.performed += OnAbility;
         cycleMaskAction.performed += OnCycleMask;
         clickAction.performed += OnClick;
         ownedMasks.Add(MaskType.None);
 
+        this.transform.gameObject.SetActive(true);
+
         //just for testing
         ObtainMask(MaskType.Ghost);
         ObtainMask(MaskType.Detective);
+
+        GameObject cinemachine = Instantiate(cinemachinePrefab);
+        cinemachine.GetComponent<CinemachineCamera>().Follow = this.transform; // Set camera to follow the player
     }
 
     void OnEnable()
     {
+        animator.SetFloat("X", 0);
+        animator.SetFloat("Y", 0);
+        animator.SetBool("isMoving", false);
+
         input.Enable();
         moveAction.Enable();
         interactAction.Enable();
@@ -160,8 +163,6 @@ public class PlayerController : MonoBehaviour
           AnimationDirectionCheck("Interact");
         }
     }
-
-
 
     public bool IsDashing()
     {

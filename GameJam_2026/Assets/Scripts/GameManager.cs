@@ -3,19 +3,14 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     static GameManager instance = null;
-    static public GameManager Instance {get 
-    {
-        if (instance == null)
-        {
-            Debug.LogError("GameManager is null");
-        }
-        return instance;
-    }}
+    static public GameManager Instance {get {return instance;}}
+
+    [SerializeField] private GameObject cinemachinePrefab = null;
+    [SerializeField] private GameObject playerPrefab = null;
 
     bool detectiveView = false;
 
     Material material = null;
-
 
     void Awake()
     {
@@ -24,11 +19,11 @@ public class GameManager : MonoBehaviour
             instance = this;
         }
         material = new Material(Resources.Load<Material>("MasterShader"));
-    }
 
-    void Start()
-    {
-        SetGlobalMaterial();
+        // Player & Camera Setup
+        GameObject player = Instantiate(playerPrefab);
+        player.SetActive(false);
+        player.GetComponent<PlayerController>().Initialize(cinemachinePrefab);
     }
 
     public bool GetDetectiveView()
@@ -47,7 +42,6 @@ public class GameManager : MonoBehaviour
         Renderer[] allRenderers = FindObjectsByType<Renderer>(FindObjectsSortMode.None);
         foreach (Renderer renderer in allRenderers)
         {
-            
             if (material == null)
             {
                 material = renderer.material;
@@ -66,11 +60,13 @@ public class GameManager : MonoBehaviour
 
     void Grayscale(bool value)
     {
+        SetGlobalMaterial();
         int saturation = 0;
         if(value)
         {
             saturation++;
         }
+
         material.SetInt("_Saturation",saturation);
     }
 
