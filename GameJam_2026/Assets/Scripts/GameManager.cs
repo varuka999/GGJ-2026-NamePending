@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
         material = new Material(Resources.Load<Material>("MasterShader"));
 
         // Player & Camera Setup
-        GameObject player = Instantiate(playerPrefab, playerSpawnTransform);
+        GameObject player = Instantiate(playerPrefab, playerSpawnTransform.position, Quaternion.identity);
         player.SetActive(false);
         player.GetComponent<PlayerController>().Initialize(cinemachinePrefab);
     }
