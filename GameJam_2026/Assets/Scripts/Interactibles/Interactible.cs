@@ -25,7 +25,7 @@ public abstract class Interactible : MonoBehaviour
         }
     }
 
-    protected virtual void Start()
+    public void InitMaterial()
     {
         material = GetComponent<SpriteRenderer>().material;
         SetActive(active);
@@ -59,7 +59,7 @@ public abstract class Interactible : MonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player" && active)
+        if(collision.tag == "Player" && active  && onlyHighlightWhenInContact)
         {
             StartHighlight();
         }
@@ -67,7 +67,7 @@ public abstract class Interactible : MonoBehaviour
 
     protected virtual void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.tag == "Player" && active)
+        if(collision.tag == "Player" && active && onlyHighlightWhenInContact)
         {
             EndHighlight();
         }

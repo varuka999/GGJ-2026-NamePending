@@ -1617,7 +1617,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RevealNextClue
   active: 0
-  visibleAfterInteract: 1
+  visibleOutsideDetective: 1
+  hideAfterInteract: 0
   nextClues:
   - {fileID: 833955573}
 --- !u!50 &556415621
@@ -2353,7 +2354,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RevealNextClue
   active: 0
-  visibleAfterInteract: 1
+  visibleOutsideDetective: 1
+  hideAfterInteract: 0
   nextClues:
   - {fileID: 1742270693}
 --- !u!50 &833955574
@@ -2681,7 +2683,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RevealNextClue
   active: 1
-  visibleAfterInteract: 1
+  visibleOutsideDetective: 0
+  hideAfterInteract: 0
   nextClues:
   - {fileID: 556415620}
 --- !u!1 &1102830471
@@ -4521,7 +4524,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ToggleObjectClue
   active: 0
-  visibleAfterInteract: 1
+  visibleOutsideDetective: 1
+  hideAfterInteract: 0
   toggleObjects:
   - {fileID: 656752712}
 --- !u!1 &1752140708
@@ -4673,6 +4677,10 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2907774543638797197, guid: 3068a5ca4217bf546a4f24884e0fd8c8, type: 3}
+      propertyPath: onlyHighlightWhenInContact
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907774543638797197, guid: 3068a5ca4217bf546a4f24884e0fd8c8, type: 3}
       propertyPath: 'toggleObjects.Array.data[0]'
       value: 
       objectReference: {fileID: 1584313252}
@@ -4710,11 +4718,11 @@ PrefabInstance:
       objectReference: {fileID: 1584313252}
     - target: {fileID: 5923806553760851100, guid: 3068a5ca4217bf546a4f24884e0fd8c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4
+      value: -3.76
       objectReference: {fileID: 0}
     - target: {fileID: 5923806553760851100, guid: 3068a5ca4217bf546a4f24884e0fd8c8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.68
+      value: 0.73
       objectReference: {fileID: 0}
     - target: {fileID: 5923806553760851100, guid: 3068a5ca4217bf546a4f24884e0fd8c8, type: 3}
       propertyPath: m_LocalPosition.z
