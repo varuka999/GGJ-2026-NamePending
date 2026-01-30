@@ -27,6 +27,16 @@ public class GameManager : MonoBehaviour
         player.GetComponent<PlayerController>().Initialize(cinemachinePrefab);
     }
 
+    void Start()
+    {
+        SetGlobalMaterial();
+        Interactible[] interactibles = FindObjectsByType<Interactible>(FindObjectsSortMode.None);
+        foreach(Interactible interactible in interactibles)
+        {
+            interactible.InitMaterial();
+        }
+    }
+
     public bool GetDetectiveView()
     {
         return detectiveView;
@@ -61,7 +71,6 @@ public class GameManager : MonoBehaviour
 
     void Grayscale(bool value)
     {
-        SetGlobalMaterial();
         int saturation = 0;
         if(value)
         {
@@ -70,6 +79,4 @@ public class GameManager : MonoBehaviour
 
         material.SetInt("_Saturation",saturation);
     }
-
-
 }
