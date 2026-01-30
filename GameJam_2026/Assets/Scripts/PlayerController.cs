@@ -44,6 +44,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 dashDestination = new Vector3(0, 0, -1);
 
 
+    private bool isAnimating = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -94,31 +96,33 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isAnimating) // will stop movement during animations
+        {
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
+
         if (IsDashing())
         {
             rb.linearVelocity = Vector2.zero;
-            transform.position = Vector3.MoveTowards(transform.position, dashDestination, dashSpeed*Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, dashDestination, dashSpeed * Time.deltaTime);
 
             if (transform.position == dashDestination)
             {
-                //end dash
+                // End dash
                 dashDestination = new Vector3(0, 0, -1);
                 rb.simulated = true;
             }
-
         }
         else if (inDetectiveMode)
         {
-            //Detective code
+            // Detective code
             rb.linearVelocity = Vector2.zero;
-
         }
         else
         {
-
-            //Movement code
+            // Movement code
             Vector2 moveInput = moveAction.ReadValue<Vector2>();
-
             AnimationDirectionCheck("Move");
 
             Vector3 direction = moveInput.normalized; // where player is 
@@ -225,9 +229,11 @@ public class PlayerController : MonoBehaviour
     {
         if (!IsDashing())
         {
+            
             ChangeDetectiveMode(false);
             currentMaskIndex = (currentMaskIndex + 1) % ownedMasks.Count;
             Debug.Log(GetCurrentMask());
+            AnimationDirectionCheck("MaskSwitch");
         }
     }
 
@@ -254,7 +260,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void AnimationDirectionCheck(string animationName) 
+    void AnimationDirectionCheck(string animationName)
     {
         Vector2 moveInput = moveAction.ReadValue<Vector2>(); // find players direction
 
@@ -263,16 +269,15 @@ public class PlayerController : MonoBehaviour
             Vector3 direction = Vector3.zero;
             direction.y += moveInput.y;
             animatorDirection = direction;
-        } 
-
+        }
         else if (moveInput.x == 1 || moveInput.x == -1) // left or right
         {
             Vector3 direction = Vector3.zero;
             direction.x += moveInput.x;
             animatorDirection = direction;
-        } 
+        }
 
-        switch (animationName) 
+        switch (animationName)
         {
             case "Interact":
                 animator.SetFloat("X", animatorDirection.x);
@@ -286,8 +291,7 @@ public class PlayerController : MonoBehaviour
                 animator.SetTrigger("Dash");
                 break;
 
-             case "Move":
-
+            case "Move":
                 if (moveInput == Vector2.zero)
                 {
                     animator.SetBool("isMoving", false);
@@ -299,14 +303,37 @@ public class PlayerController : MonoBehaviour
 
                 animator.SetFloat("X", animatorDirection.x);
                 animator.SetFloat("Y", animatorDirection.y);
-
-
                 break;
 
+            case "MaskSwitch":
+
+                isAnimating = true; // Disable movement during animation
+
+                if (GetCurrentMask() == MaskType.Detective) // jason mask
+                {
+                    animator.SetFloat("WutMask", 1); // jason mask
+                    animator.SetTrigger("Mask");
+                    OnAnimationEnd();
+                }
+                else if (GetCurrentMask() == MaskType.Ghost) // ghost mask
+                {
+                    animator.SetFloat("WutMask", 0); // ghost mask
+                    animator.SetTrigger("Mask");
+                    OnAnimationEnd();
+                }
+                break;
 
             default:
                 break;
         }
     }
+
+    public void OnAnimationEnd()
+    {
+        isAnimating = false;
+    }
+
+
+
 
 }
