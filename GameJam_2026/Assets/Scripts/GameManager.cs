@@ -22,9 +22,19 @@ public class GameManager : MonoBehaviour
         material = new Material(Resources.Load<Material>("MasterShader"));
 
         // Player & Camera Setup
-        GameObject player = Instantiate(playerPrefab, playerSpawnTransform);
+        GameObject player = Instantiate(playerPrefab, playerSpawnTransform.position, Quaternion.identity);
         player.SetActive(false);
         player.GetComponent<PlayerController>().Initialize(cinemachinePrefab);
+    }
+
+    void Start()
+    {
+        SetGlobalMaterial();
+        Interactible[] interactibles = FindObjectsByType<Interactible>(FindObjectsSortMode.None);
+        foreach(Interactible interactible in interactibles)
+        {
+            interactible.InitMaterial();
+        }
     }
 
     public bool GetDetectiveView()
@@ -61,7 +71,6 @@ public class GameManager : MonoBehaviour
 
     void Grayscale(bool value)
     {
-        SetGlobalMaterial();
         int saturation = 0;
         if(value)
         {
@@ -70,6 +79,4 @@ public class GameManager : MonoBehaviour
 
         material.SetInt("_Saturation",saturation);
     }
-
-
 }
