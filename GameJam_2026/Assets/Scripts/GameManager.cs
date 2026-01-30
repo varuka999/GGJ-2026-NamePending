@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject cinemachinePrefab = null;
     [SerializeField] private GameObject playerPrefab = null;
+    [SerializeField] private Transform playerSpawnTransform = null;
 
     bool detectiveView = false;
 
@@ -21,7 +22,7 @@ public class GameManager : MonoBehaviour
         material = new Material(Resources.Load<Material>("MasterShader"));
 
         // Player & Camera Setup
-        GameObject player = Instantiate(playerPrefab);
+        GameObject player = Instantiate(playerPrefab, playerSpawnTransform);
         player.SetActive(false);
         player.GetComponent<PlayerController>().Initialize(cinemachinePrefab);
     }
