@@ -11,7 +11,7 @@ public abstract class Clue : MonoBehaviour
 
     bool visibleHighlight = false;
 
-    [SerializeField] string textWhenClicked = "";
+    [SerializeField] string textWhenClicked = string.Empty;
 
     [SerializeField] protected bool visibleOutsideDetective = true;
 
@@ -111,8 +111,10 @@ public abstract class Clue : MonoBehaviour
     {
         if (textWhenClicked != "")
         {
-            //Show text with UI
+            UIManager.Instance.RequestDisplayClueText(textWhenClicked, transform);
+
             Debug.Log(textWhenClicked);
+
         }
         OnInteract();
     }
