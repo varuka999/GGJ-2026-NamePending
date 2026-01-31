@@ -24,7 +24,16 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Ints: []
-    m_Floats: []
+    m_Floats:
+    - _Contrast: 0
+    - _Distortion: 1
+    - _Emission: 0
+    - _EmissionMultiplier: 3.2
+    - _HitEffect: 0
+    - _Outline: 0
+    - _OutlineThickness: 1
+    - _Pixelation: 0
+    - _Saturation: 0
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1
