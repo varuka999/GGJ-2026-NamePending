@@ -17,6 +17,8 @@ public abstract class Clue : MonoBehaviour
 
     [SerializeField] bool hideAfterInteract = false;
     
+    [SerializeField] bool nonInteractible = false;
+
     bool revealed = false;
     
 
@@ -64,7 +66,10 @@ public abstract class Clue : MonoBehaviour
                 if (!visibleOutsideDetective)
                 {
                     sprite.enabled = true;
-                    hitbox.enabled = true;
+                    if (!nonInteractible)
+                    {
+                        hitbox.enabled = true;
+                    }
                 }
                 StartHighlight();
             }
@@ -74,7 +79,10 @@ public abstract class Clue : MonoBehaviour
                 if (!visibleOutsideDetective)
                 {
                     sprite.enabled = false;
-                    hitbox.enabled = false;
+                    if (!nonInteractible)
+                    {
+                        hitbox.enabled = true;
+                    }
                 }
             }
         }
@@ -88,7 +96,10 @@ public abstract class Clue : MonoBehaviour
     {
         //can override this to have more interesting highlight effects
         //just make sure to also override EndHighlight to disable them
-        material.SetInt("_Outline",1);
+        if (!nonInteractible)
+        {
+            material.SetInt("_Outline",1);
+        }
         material.SetInt("_Saturation",0);
     }
 
@@ -114,7 +125,6 @@ public abstract class Clue : MonoBehaviour
             UIManager.Instance.RequestDisplayClueText(textWhenClicked, transform);
 
             Debug.Log(textWhenClicked);
-
         }
         OnInteract();
     }
