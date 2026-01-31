@@ -242,13 +242,18 @@ public class PlayerController : MonoBehaviour
 
     public void ObtainMask(MaskType mask)
     {
+
         if (ownedMasks[0] == MaskType.None)
         {
             ownedMasks[0] = mask;
+            AnimationDirectionCheck("MaskSwitch");
+
         }
         else
         {
             ownedMasks.Add(mask);
+            currentMaskIndex = (currentMaskIndex + 1) % ownedMasks.Count;
+            AnimationDirectionCheck("MaskSwitch");
         }
     }
 
