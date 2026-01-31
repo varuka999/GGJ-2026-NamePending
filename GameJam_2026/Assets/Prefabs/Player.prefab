@@ -307,6 +307,7 @@ MonoBehaviour:
   inDetectiveMode: 0
   dashDistance: 3.5
   dashSpeed: 12
+  maskChangeVFX: {fileID: 0}
 --- !u!95 &59121658705024905
 Animator:
   serializedVersion: 7
@@ -338,20 +339,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 6625933641491656056}
     m_Modifications:
     - target: {fileID: 2151523165161254770, guid: 999cff140c5ba0a42a64fe05aa1f0034, type: 3}
-      propertyPath: ShapeModule.arc.spread
-      value: 0
+      propertyPath: lengthInSec
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2151523165161254770, guid: 999cff140c5ba0a42a64fe05aa1f0034, type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
+      propertyPath: playOnAwake
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151523165161254770, guid: 999cff140c5ba0a42a64fe05aa1f0034, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 5049925613930141461, guid: 999cff140c5ba0a42a64fe05aa1f0034, type: 3}
       propertyPath: m_Name
-      value: Particle System
-      objectReference: {fileID: 0}
-    - target: {fileID: 6666829096325924667, guid: 999cff140c5ba0a42a64fe05aa1f0034, type: 3}
-      propertyPath: m_SortingOrder
-      value: 5
+      value: PlayMaskVFX
       objectReference: {fileID: 0}
     - target: {fileID: 8392227242441267711, guid: 999cff140c5ba0a42a64fe05aa1f0034, type: 3}
       propertyPath: m_LocalPosition.x
