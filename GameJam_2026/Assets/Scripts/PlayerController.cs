@@ -53,6 +53,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    Vector3 checkpointPos = Vector3.zero;
+
     public void Initialize(GameObject cinemachinePrefab)
     {
         input = new PlayerInput();
@@ -71,11 +73,13 @@ public class PlayerController : MonoBehaviour
         clickAction.performed += OnClick;
         ownedMasks.Add(MaskType.None);
 
+        checkpointPos = transform.position;
+
         this.transform.gameObject.SetActive(true);
 
         //just for testing
-        ObtainMask(MaskType.Ghost);
-        ObtainMask(MaskType.Detective);
+        //ObtainMask(MaskType.Ghost);
+        //ObtainMask(MaskType.Detective);
 
         GameObject cinemachine = Instantiate(cinemachinePrefab);
         cinemachine.GetComponent<CinemachineCamera>().Follow = this.transform; // Set camera to follow the player
@@ -108,31 +112,28 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (IsDashing())
         {
             rb.linearVelocity = Vector2.zero;
-            transform.position = Vector3.MoveTowards(transform.position, dashDestination, dashSpeed*Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, dashDestination, dashSpeed * Time.deltaTime);
 
             if (transform.position == dashDestination)
             {
-                //end dash
+                // End dash
                 dashDestination = new Vector3(0, 0, -1);
                 rb.simulated = true;
             }
-
         }
         else if (inDetectiveMode)
         {
-            //Detective code
+            // Detective code
             rb.linearVelocity = Vector2.zero;
-
         }
         else
         {
-
-            //Movement code
+            // Movement code
             Vector2 moveInput = moveAction.ReadValue<Vector2>();
-
             AnimationDirectionCheck("Move");
 
             Vector3 direction = moveInput.normalized; // where player is 
@@ -146,6 +147,14 @@ public class PlayerController : MonoBehaviour
         if (interactible != null)
         {
             interactibles.Add(interactible);
+        }
+        if (collision.tag == "Checkpoint")
+        {
+            checkpointPos = collision.transform.position;
+        }
+        if (collision.tag == "Trap")
+        {
+            transform.position = checkpointPos;
         }
     }
 
@@ -221,7 +230,7 @@ public class PlayerController : MonoBehaviour
         return ownedMasks[currentMaskIndex];
     }
 
-    void ObtainMask(MaskType mask)
+    public void ObtainMask(MaskType mask)
     {
         if (ownedMasks[0] == MaskType.None)
         {
@@ -240,7 +249,11 @@ public class PlayerController : MonoBehaviour
             ChangeDetectiveMode(false);
             currentMaskIndex = (currentMaskIndex + 1) % ownedMasks.Count;
             Debug.Log(GetCurrentMask());
+            Debug.Log(currentMaskIndex);
+            
         }
+
+        AnimationDirectionCheck("MaskSwitch");
     }
 
     void OnClick(InputAction.CallbackContext context)
@@ -259,14 +272,14 @@ public class PlayerController : MonoBehaviour
                 {
                     if (clue.GetActive())
                     {
-                        clue.OnInteract();
+                        clue.StartInteract();
                     }
                 }
             }
         }
     }
 
-    void AnimationDirectionCheck(string animationName) 
+    void AnimationDirectionCheck(string animationName)
     {
         Vector2 moveInput = moveAction.ReadValue<Vector2>(); // find players direction
 
@@ -275,16 +288,15 @@ public class PlayerController : MonoBehaviour
             Vector3 direction = Vector3.zero;
             direction.y += moveInput.y;
             animatorDirection = direction;
-        } 
-
+        }
         else if (moveInput.x == 1 || moveInput.x == -1) // left or right
         {
             Vector3 direction = Vector3.zero;
             direction.x += moveInput.x;
             animatorDirection = direction;
-        } 
+        }
 
-        switch (animationName) 
+        switch (animationName)
         {
             case "Interact":
                 animator.SetFloat("X", animatorDirection.x);
@@ -298,8 +310,7 @@ public class PlayerController : MonoBehaviour
                 animator.SetTrigger("Dash");
                 break;
 
-             case "Move":
-
+            case "Move":
                 if (moveInput == Vector2.zero)
                 {
                     animator.SetBool("isMoving", false);
@@ -311,14 +322,32 @@ public class PlayerController : MonoBehaviour
 
                 animator.SetFloat("X", animatorDirection.x);
                 animator.SetFloat("Y", animatorDirection.y);
-
-
                 break;
 
+            case "MaskSwitch":
+
+                if (GetCurrentMask() == MaskType.Detective) // jason mask
+                {
+                    Debug.Log("Detective Mask active");
+                    animator.SetTrigger("Clue");
+                }
+
+                else if (GetCurrentMask() == MaskType.Ghost) // ghost mask
+                {
+                    Debug.Log("Ghost Mask active");
+                    animator.SetTrigger("Ghost");
+                }
+
+                break;
 
             default:
                 break;
         }
     }
+
+  
+
+
+
 
 }

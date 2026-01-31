@@ -6,14 +6,29 @@ public abstract class Clue : MonoBehaviour
     [SerializeField] bool active = false;
     protected Material material = null;
 
+    Renderer sprite = null;
+    Collider2D hitbox = null;
+
     bool visibleHighlight = false;
 
-    [SerializeField] bool visibleAfterInteract = true;
+    [SerializeField] string textWhenClicked = string.Empty;
+
+    [SerializeField] protected bool visibleOutsideDetective = true;
+
+    [SerializeField] bool hideAfterInteract = false;
+    
     bool revealed = false;
+    
 
     protected virtual void Awake()
     {
         GetComponent<SpriteRenderer>().material = Resources.Load<Material>("MasterShader");
+        sprite = GetComponent<Renderer>();
+        hitbox = GetComponent<Collider2D>();
+    }
+
+    protected virtual void Start()
+    {
         SetActive(active);
     }
 
@@ -30,7 +45,7 @@ public abstract class Clue : MonoBehaviour
 
     public void SetActive(bool isActive)
     {
-        if (active && !isActive && visibleAfterInteract)
+        if (active && !isActive && !hideAfterInteract)
         {
             revealed = true;
         }
@@ -46,11 +61,21 @@ public abstract class Clue : MonoBehaviour
             visibleHighlight = GameManager.Instance.GetDetectiveView();
             if (visibleHighlight)
             {
+                if (!visibleOutsideDetective)
+                {
+                    sprite.enabled = true;
+                    hitbox.enabled = true;
+                }
                 StartHighlight();
             }
             else
             {
                 EndHighlight();
+                if (!visibleOutsideDetective)
+                {
+                    sprite.enabled = false;
+                    hitbox.enabled = false;
+                }
             }
         }
         else if (!active)
@@ -69,7 +94,6 @@ public abstract class Clue : MonoBehaviour
 
     protected virtual void EndHighlight()
     {
-        
         if (revealed)
         {
             //just disable outline
@@ -81,6 +105,18 @@ public abstract class Clue : MonoBehaviour
             material = GameManager.Instance.GetMaterial();
             GetComponent<SpriteRenderer>().material = material;
         }
+    }
+
+    public virtual void StartInteract()
+    {
+        if (textWhenClicked != "")
+        {
+            UIManager.Instance.RequestDisplayClueText(textWhenClicked, transform);
+
+            Debug.Log(textWhenClicked);
+
+        }
+        OnInteract();
     }
 
     public abstract void OnInteract();
