@@ -5,9 +5,9 @@ using UnityEngine.InputSystem;
 
 public enum MaskType
 {
-    None,
-    Ghost,
-    Detective,
+    None = -1,
+    Detective = 0,
+    Ghost = 1,
 }
 
 public class PlayerController : MonoBehaviour
@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private InputAction abilityAction = null;
     private InputAction cycleMaskAction = null;
     private InputAction clickAction = null;
+    private InputAction uiToggleAction = null;
 
     [SerializeField] float moveSpeed = 8.0f;
 
@@ -63,6 +64,7 @@ public class PlayerController : MonoBehaviour
         abilityAction = input.Player.Ability;
         cycleMaskAction = input.Player.CycleMask;
         clickAction = input.Player.Click;
+        uiToggleAction = input.Player.UIToggle;
 
         rb = GetComponent<Rigidbody2D>();
         box = GetComponent<BoxCollider2D>();
@@ -71,6 +73,7 @@ public class PlayerController : MonoBehaviour
         abilityAction.performed += OnAbility;
         cycleMaskAction.performed += OnCycleMask;
         clickAction.performed += OnClick;
+        uiToggleAction.performed += OnUIToggle;
         ownedMasks.Add(MaskType.None);
 
         checkpointPos = transform.position;
@@ -97,6 +100,7 @@ public class PlayerController : MonoBehaviour
         abilityAction.Enable();
         cycleMaskAction.Enable();
         clickAction.Enable();
+        uiToggleAction.Enable();
     }
 
     void OnDisable()
@@ -107,6 +111,7 @@ public class PlayerController : MonoBehaviour
         abilityAction.Disable();
         cycleMaskAction.Disable();
         clickAction.Disable();
+        uiToggleAction.Disable();
     }
 
     // Update is called once per frame
@@ -257,15 +262,30 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void ChangeMaskOnPickup(MaskType mask)
+    {
+        currentMaskIndex = (int)mask;
+        UIManager.Instance.UpdateControlsText(currentMaskIndex);
+        AnimationDirectionCheck("MaskSwitch");
+    }
+
     void OnCycleMask(InputAction.CallbackContext context)
     {
         if (!IsDashing())
         {
             ChangeDetectiveMode(false);
+
+            int tempIndex = currentMaskIndex;//
             currentMaskIndex = (currentMaskIndex + 1) % ownedMasks.Count;
+            if (currentMaskIndex == tempIndex)//
+            {
+                return;
+            }
+
             Debug.Log(GetCurrentMask());
             Debug.Log(currentMaskIndex);
-            
+
+            UIManager.Instance.UpdateControlsText(currentMaskIndex);
         }
 
         AnimationDirectionCheck("MaskSwitch");
@@ -365,9 +385,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-  
-
-
+    private void OnUIToggle(InputAction.CallbackContext context)
+    {
+        // Toggle UI elements for controls on/off
+        UIManager.Instance.ToggleUIControls(currentMaskIndex);
+    }
 
 
 }

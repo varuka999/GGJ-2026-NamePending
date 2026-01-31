@@ -8,8 +8,11 @@ public class MaskPickup : Interactible
     public override void OnInteract()
     {
         FindFirstObjectByType<PlayerController>().ObtainMask(maskType);
+        FindFirstObjectByType<PlayerController>().ChangeMaskOnPickup(maskType);
         FindAnyObjectByType<PlayerController>().GetComponent<Animator>().SetTrigger("G_FirstEquip");
         GetComponent<Collider2D>().enabled = false;
         GetComponent<SpriteRenderer>().enabled = false;
+
+        UIManager.Instance.UpdateControlsText((int)maskType);
     }
 }

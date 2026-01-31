@@ -136,6 +136,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UIToggle"",
+                    ""type"": ""Button"",
+                    ""id"": ""80840491-98b0-4d74-aecd-2f39f0c02c99"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -277,8 +286,19 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Keyboard&Mouse"",
                     ""action"": ""CycleMask"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""47f105cf-4bd5-4a94-a053-2c3d1fdd9007"",
+                    ""path"": ""<Keyboard>/t"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""UIToggle"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -871,6 +891,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Player_Ability = m_Player.FindAction("Ability", throwIfNotFound: true);
         m_Player_Click = m_Player.FindAction("Click", throwIfNotFound: true);
         m_Player_CycleMask = m_Player.FindAction("CycleMask", throwIfNotFound: true);
+        m_Player_UIToggle = m_Player.FindAction("UIToggle", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -969,6 +990,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Ability;
     private readonly InputAction m_Player_Click;
     private readonly InputAction m_Player_CycleMask;
+    private readonly InputAction m_Player_UIToggle;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -1000,6 +1022,10 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/CycleMask".
         /// </summary>
         public InputAction @CycleMask => m_Wrapper.m_Player_CycleMask;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/UIToggle".
+        /// </summary>
+        public InputAction @UIToggle => m_Wrapper.m_Player_UIToggle;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1041,6 +1067,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @CycleMask.started += instance.OnCycleMask;
             @CycleMask.performed += instance.OnCycleMask;
             @CycleMask.canceled += instance.OnCycleMask;
+            @UIToggle.started += instance.OnUIToggle;
+            @UIToggle.performed += instance.OnUIToggle;
+            @UIToggle.canceled += instance.OnUIToggle;
         }
 
         /// <summary>
@@ -1067,6 +1096,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @CycleMask.started -= instance.OnCycleMask;
             @CycleMask.performed -= instance.OnCycleMask;
             @CycleMask.canceled -= instance.OnCycleMask;
+            @UIToggle.started -= instance.OnUIToggle;
+            @UIToggle.performed -= instance.OnUIToggle;
+            @UIToggle.canceled -= instance.OnUIToggle;
         }
 
         /// <summary>
@@ -1402,6 +1434,13 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnCycleMask(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "UIToggle" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnUIToggle(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

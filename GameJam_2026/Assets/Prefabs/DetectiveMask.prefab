@@ -154,4 +154,4 @@ MonoBehaviour:
   interactionCooldown: 0
   onlyHighlightWhenInContact: 1
   textOnInteract: Detective Mask Found!
-  maskType: 2
+  maskType: 0
