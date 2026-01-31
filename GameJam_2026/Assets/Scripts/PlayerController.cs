@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float dashSpeed = 12.0f;
     private Vector3 dashDestination = new Vector3(0, 0, -1);
 
+    Vector3 checkpointPos= Vector3.zero;
 
     public void Initialize(GameObject cinemachinePrefab)
     {
@@ -60,6 +61,8 @@ public class PlayerController : MonoBehaviour
         cycleMaskAction.performed += OnCycleMask;
         clickAction.performed += OnClick;
         ownedMasks.Add(MaskType.None);
+
+        checkpointPos = transform.position;
 
         this.transform.gameObject.SetActive(true);
 
@@ -133,6 +136,14 @@ public class PlayerController : MonoBehaviour
         if (interactible != null)
         {
             interactibles.Add(interactible);
+        }
+        if (collision.tag == "Checkpoint")
+        {
+            checkpointPos = collision.transform.position;
+        }
+        if (collision.tag == "Trap")
+        {
+            transform.position = checkpointPos;
         }
     }
 
