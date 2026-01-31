@@ -38,8 +38,8 @@ public class UIManager : MonoBehaviour
 
     public void DisplayClueText(string clueString, Transform clue)
     {
-        TMP_Text textToDisplay = Instantiate(displayText, canvasPrefab.transform);
-        textToDisplay.transform.position = Camera.main.WorldToScreenPoint(clue.position) + new Vector3(50.0f, 50.0f, 0f);
+        TMP_Text textToDisplay = Instantiate(displayText, clue.transform);
+        //textToDisplay.transform.position = Camera.main.WorldToScreenPoint(clue.position) + new Vector3(50.0f, 50.0f, 0f);
         textToDisplay.text = clueString;
     }
 }

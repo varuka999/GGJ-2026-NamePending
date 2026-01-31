@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e401a364e0d0fb49876832fd73eadf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  uiManagerPrefab: {fileID: 267290485222971245, guid: 77402b84852b2a14e8143c52992af9e4, type: 3}
   cinemachinePrefab: {fileID: 396114460267443679, guid: 99cf04e7b22bb844cb7c47d8957b3b38, type: 3}
   playerPrefab: {fileID: 9149777887662120072, guid: 4dd944dd3ee80984481d2d60b568304d, type: 3}
   playerSpawnTransform: {fileID: 6902997975047128887}

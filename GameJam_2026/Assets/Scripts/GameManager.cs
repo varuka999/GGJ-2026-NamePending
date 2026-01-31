@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
     static GameManager instance = null;
     static public GameManager Instance {get {return instance;}}
 
+    [SerializeField] private GameObject uiManagerPrefab = null;
     [SerializeField] private GameObject cinemachinePrefab = null;
     [SerializeField] private GameObject playerPrefab = null;
     [SerializeField] private Transform playerSpawnTransform = null;
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour
         }
         material = new Material(Resources.Load<Material>("MasterShader"));
 
+        Instantiate(uiManagerPrefab);
         // Player & Camera Setup
         GameObject player = Instantiate(playerPrefab, playerSpawnTransform.position, Quaternion.identity);
         player.SetActive(false);

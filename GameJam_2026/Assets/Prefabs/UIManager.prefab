@@ -30,7 +30,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5460304332903169884}
+  - {fileID: 463580553924834045}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6765297571651255138
@@ -45,9 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3366339e8a0575142a692df805a5ddcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
-  canvasPrefab: {fileID: 1209108504912645840}
-  displayText: {fileID: 6058621728158214991, guid: 8197a924243def349b51dcc75da8223f, type: 3}
---- !u!1001 &4506029607442569528
+  canvasPrefab: {fileID: 3336955988425644008, guid: f6f1b0d1df46f324895e62bfc1b33a44, type: 3}
+  displayText: {fileID: 6382265207235327852, guid: 66b8477ab8301274fa88fa7569fd24e6, type: 3}
+--- !u!1001 &8295841480032785561
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -57,7 +57,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3336955988425644008, guid: f6f1b0d1df46f324895e62bfc1b33a44, type: 3}
       propertyPath: m_Name
-      value: UI
+      value: ControlsUI
       objectReference: {fileID: 0}
     - target: {fileID: 8452772516601652836, guid: f6f1b0d1df46f324895e62bfc1b33a44, type: 3}
       propertyPath: m_Pivot.x
@@ -144,13 +144,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6f1b0d1df46f324895e62bfc1b33a44, type: 3}
---- !u!1 &1209108504912645840 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3336955988425644008, guid: f6f1b0d1df46f324895e62bfc1b33a44, type: 3}
-  m_PrefabInstance: {fileID: 4506029607442569528}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &5460304332903169884 stripped
+--- !u!224 &463580553924834045 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8452772516601652836, guid: f6f1b0d1df46f324895e62bfc1b33a44, type: 3}
-  m_PrefabInstance: {fileID: 4506029607442569528}
+  m_PrefabInstance: {fileID: 8295841480032785561}
   m_PrefabAsset: {fileID: 0}
