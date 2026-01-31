@@ -78,7 +78,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1795566695
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 10
   m_Sprite: {fileID: 2506524719053803025, guid: 5aa68c113f704c54eb8543540e5feb0e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -199,7 +199,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6625933641491656056
 Transform:
   m_ObjectHideFlags: 0
@@ -338,26 +338,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6625933641491656056}
     m_Modifications:
-    - target: {fileID: 2151523165161254770, guid: 999cff140c5ba0a42a64fe05aa1f0034, type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 1.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 2151523165161254770, guid: 999cff140c5ba0a42a64fe05aa1f0034, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 0.59
-      objectReference: {fileID: 0}
-    - target: {fileID: 2151523165161254770, guid: 999cff140c5ba0a42a64fe05aa1f0034, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2151523165161254770, guid: 999cff140c5ba0a42a64fe05aa1f0034, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2151523165161254770, guid: 999cff140c5ba0a42a64fe05aa1f0034, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.061599493
-      objectReference: {fileID: 0}
     - target: {fileID: 5049925613930141461, guid: 999cff140c5ba0a42a64fe05aa1f0034, type: 3}
       propertyPath: m_Name
       value: PlayMaskVFX
