@@ -480,7 +480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8918868149959973412, guid: a96d765a1239d0f41a9041075884e1fd, type: 3}
       propertyPath: m_PlayOnAwake
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8918868149959973412, guid: a96d765a1239d0f41a9041075884e1fd, type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
