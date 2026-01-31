@@ -42,7 +42,18 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float dashSpeed = 12.0f;
     private Vector3 dashDestination = new Vector3(0, 0, -1);
 
-    Vector3 checkpointPos= Vector3.zero;
+    // particle stuff 
+    [SerializeField] private ParticleSystem maskChangeVFX;
+
+    public void PlayMaskVFX()
+    {
+        if (maskChangeVFX != null)
+        {
+            maskChangeVFX.Play();
+        }
+    }
+
+    Vector3 checkpointPos = Vector3.zero;
 
     public void Initialize(GameObject cinemachinePrefab)
     {
