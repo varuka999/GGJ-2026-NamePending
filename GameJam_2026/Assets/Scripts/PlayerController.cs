@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float dashSpeed = 12.0f;
     private Vector3 dashDestination = new Vector3(0, 0, -1);
 
+    Vector3 checkpointPos= Vector3.zero;
 
     public void Initialize(GameObject cinemachinePrefab)
     {
@@ -61,11 +62,13 @@ public class PlayerController : MonoBehaviour
         clickAction.performed += OnClick;
         ownedMasks.Add(MaskType.None);
 
+        checkpointPos = transform.position;
+
         this.transform.gameObject.SetActive(true);
 
         //just for testing
-        ObtainMask(MaskType.Ghost);
-        ObtainMask(MaskType.Detective);
+        //ObtainMask(MaskType.Ghost);
+        //ObtainMask(MaskType.Detective);
 
         GameObject cinemachine = Instantiate(cinemachinePrefab);
         cinemachine.GetComponent<CinemachineCamera>().Follow = this.transform; // Set camera to follow the player
@@ -133,6 +136,14 @@ public class PlayerController : MonoBehaviour
         if (interactible != null)
         {
             interactibles.Add(interactible);
+        }
+        if (collision.tag == "Checkpoint")
+        {
+            checkpointPos = collision.transform.position;
+        }
+        if (collision.tag == "Trap")
+        {
+            transform.position = checkpointPos;
         }
     }
 
@@ -208,7 +219,7 @@ public class PlayerController : MonoBehaviour
         return ownedMasks[currentMaskIndex];
     }
 
-    void ObtainMask(MaskType mask)
+    public void ObtainMask(MaskType mask)
     {
         if (ownedMasks[0] == MaskType.None)
         {
