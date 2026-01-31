@@ -42,7 +42,18 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float dashSpeed = 12.0f;
     private Vector3 dashDestination = new Vector3(0, 0, -1);
 
-    Vector3 checkpointPos= Vector3.zero;
+    // particle stuff 
+    [SerializeField] private ParticleSystem maskChangeVFX;
+
+    public void PlayMaskVFX()
+    {
+        if (maskChangeVFX != null)
+        {
+            maskChangeVFX.Play();
+        }
+    }
+
+    Vector3 checkpointPos = Vector3.zero;
 
     public void Initialize(GameObject cinemachinePrefab)
     {
@@ -211,7 +222,17 @@ public class PlayerController : MonoBehaviour
     void ChangeDetectiveMode(bool mode)
     {
         inDetectiveMode = mode;
-        GameManager.Instance.SetDetectiveView(mode);
+
+        // keep animator in sync 
+        if (animator != null)
+        {
+            animator.SetBool("DetectiveMode", mode);
+        }
+
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.SetDetectiveView(mode);
+        }
     }
 
     MaskType GetCurrentMask()
@@ -327,6 +348,11 @@ public class PlayerController : MonoBehaviour
                     animator.SetTrigger("Ghost");
                 }
 
+                break;
+
+            case "DetectiveMode":
+                animator.SetFloat("X", animatorDirection.x);
+                animator.SetFloat("Y", animatorDirection.y);
                 break;
 
             default:
