@@ -307,7 +307,7 @@ MonoBehaviour:
   inDetectiveMode: 0
   dashDistance: 3.5
   dashSpeed: 12
-  maskChangeVFX: {fileID: 0}
+  maskChangeVFX: {fileID: 4384500122159842683}
 --- !u!95 &59121658705024905
 Animator:
   serializedVersion: 7
@@ -344,11 +344,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8392227242441267711, guid: 999cff140c5ba0a42a64fe05aa1f0034, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.009
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8392227242441267711, guid: 999cff140c5ba0a42a64fe05aa1f0034, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.195
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 8392227242441267711, guid: 999cff140c5ba0a42a64fe05aa1f0034, type: 3}
       propertyPath: m_LocalPosition.z
@@ -387,6 +387,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 999cff140c5ba0a42a64fe05aa1f0034, type: 3}
+--- !u!198 &4384500122159842683 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2151523165161254770, guid: 999cff140c5ba0a42a64fe05aa1f0034, type: 3}
+  m_PrefabInstance: {fileID: 2378852002589010441}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6157633986255008758 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8392227242441267711, guid: 999cff140c5ba0a42a64fe05aa1f0034, type: 3}

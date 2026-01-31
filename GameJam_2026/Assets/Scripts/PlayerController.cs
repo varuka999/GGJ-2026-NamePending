@@ -222,7 +222,17 @@ public class PlayerController : MonoBehaviour
     void ChangeDetectiveMode(bool mode)
     {
         inDetectiveMode = mode;
-        GameManager.Instance.SetDetectiveView(mode);
+
+        // keep animator in sync 
+        if (animator != null)
+        {
+            animator.SetBool("DetectiveMode", mode);
+        }
+
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.SetDetectiveView(mode);
+        }
     }
 
     MaskType GetCurrentMask()
@@ -338,6 +348,11 @@ public class PlayerController : MonoBehaviour
                     animator.SetTrigger("Ghost");
                 }
 
+                break;
+
+            case "DetectiveMode":
+                animator.SetFloat("X", animatorDirection.x);
+                animator.SetFloat("Y", animatorDirection.y);
                 break;
 
             default:
