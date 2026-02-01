@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
 
     // particle stuff 
     [SerializeField] private ParticleSystem maskChangeVFX;
+    
 
     public void PlayMaskVFX()
     {
