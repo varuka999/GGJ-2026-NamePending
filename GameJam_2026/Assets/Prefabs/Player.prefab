@@ -342,9 +342,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 6625933641491656056}
     m_Modifications:
     - target: {fileID: 3480188628043693808, guid: 193ca6e9101c48d4fb4a460f056e0433, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3480188628043693808, guid: 193ca6e9101c48d4fb4a460f056e0433, type: 3}
+      propertyPath: Pan2D
+      value: 0.416
+      objectReference: {fileID: 0}
+    - target: {fileID: 3480188628043693808, guid: 193ca6e9101c48d4fb4a460f056e0433, type: 3}
+      propertyPath: m_Pitch
+      value: 0.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 3480188628043693808, guid: 193ca6e9101c48d4fb4a460f056e0433, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3480188628043693808, guid: 193ca6e9101c48d4fb4a460f056e0433, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 0650165c58f6aa24f8a42511caab3dc6, type: 3}
+      objectReference: {fileID: 8300000, guid: d5335d179ff94f248b6abfac17e817b3, type: 3}
     - target: {fileID: 4534906749477750271, guid: 193ca6e9101c48d4fb4a460f056e0433, type: 3}
       propertyPath: m_Volume
       value: 0.85
