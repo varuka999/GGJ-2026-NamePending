@@ -155,3 +155,4 @@ MonoBehaviour:
   visibleOutsideDetective: 0
   hideAfterInteract: 0
   nonInteractible: 1
+  revealWhenActive: 0
