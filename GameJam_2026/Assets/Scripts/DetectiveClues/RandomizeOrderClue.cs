@@ -92,7 +92,7 @@ public class RandomizeOrderClue : Clue
             else
             {
                 clue.orderIndex = indexes[indexIndex];
-                numberSprite.sprite = numbers[clue.orderIndex];
+                clue.numberSprite.sprite = numbers[clue.orderIndex];
                 indexIndex++;
             }
         }
