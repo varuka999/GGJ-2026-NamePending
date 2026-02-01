@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/StageHub2.unity
     guid: 689c18352f4a3884fb8fff2c6ab52905
   - enabled: 1
-    path: Assets/Scenes/LevelDesignTestScene 2.unity
+    path: Assets/Scenes/LevelTwo.unity
     guid: af2c3bd35c975e742b324d33e9324fec
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

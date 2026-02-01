@@ -25,7 +25,7 @@ public abstract class Clue : MonoBehaviour
 
     protected virtual void Awake()
     {
-        GetComponent<SpriteRenderer>().material = Resources.Load<Material>("MasterShader");
+        GetComponent<Renderer>().material = Resources.Load<Material>("MasterShader");
         sprite = GetComponent<Renderer>();
         hitbox = GetComponent<Collider2D>();
     }
@@ -65,7 +65,7 @@ public abstract class Clue : MonoBehaviour
     {
         if (active && (visibleHighlight != GameManager.Instance.GetDetectiveView()))
         {
-            material = GetComponent<SpriteRenderer>().material;
+            material = GetComponent<Renderer>().material;
             visibleHighlight = GameManager.Instance.GetDetectiveView();
             if (visibleHighlight)
             {
@@ -120,7 +120,7 @@ public abstract class Clue : MonoBehaviour
         {
             //set back to default material
             material = GameManager.Instance.GetMaterial();
-            GetComponent<SpriteRenderer>().material = material;
+            GetComponent<Renderer>().material = material;
         }
     }
 
