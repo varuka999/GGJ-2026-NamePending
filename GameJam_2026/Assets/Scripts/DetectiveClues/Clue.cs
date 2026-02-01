@@ -21,6 +21,7 @@ public abstract class Clue : MonoBehaviour
 
     bool revealed = false;
     
+    [SerializeField] bool revealWhenActive = false;
 
     protected virtual void Awake()
     {
@@ -50,6 +51,11 @@ public abstract class Clue : MonoBehaviour
         if (active && !isActive && !hideAfterInteract)
         {
             revealed = true;
+        }
+        else if (isActive && !active && revealWhenActive)
+        {
+            sprite.enabled = true;
+            hitbox.enabled = true;
         }
         active = isActive;
         UpdateHighlight();
