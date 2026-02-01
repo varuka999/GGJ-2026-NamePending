@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -9,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject cinemachinePrefab = null;
     [SerializeField] private GameObject playerPrefab = null;
     [SerializeField] private Transform playerSpawnTransform = null;
+    [SerializeField] private List<MaskType> startingMasks;
 
     [SerializeField] private Texture2D detectiveCursorTexture = null;
 
@@ -29,6 +31,10 @@ public class GameManager : MonoBehaviour
         GameObject player = Instantiate(playerPrefab, playerSpawnTransform.position, Quaternion.identity);
         player.SetActive(false);
         player.GetComponent<PlayerController>().Initialize(cinemachinePrefab);
+        foreach (MaskType mask in startingMasks)
+        {
+            player.GetComponent<PlayerController>().ObtainMask(mask);
+        }
     }
 
     void Start()

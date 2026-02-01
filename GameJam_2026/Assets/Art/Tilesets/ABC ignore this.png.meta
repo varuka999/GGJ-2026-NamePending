@@ -1,0 +1,1793 @@
+fileFormatVersion: 2
+guid: 4f69836b70a0b7743a646604db46c251
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7801583785112116577
+    second: ABC ignore this_0
+  - first:
+      213: -7412537112762223949
+    second: ABC ignore this_1
+  - first:
+      213: -4692237918610560204
+    second: ABC ignore this_2
+  - first:
+      213: 4854806730708320776
+    second: ABC ignore this_3
+  - first:
+      213: 2288388296906713870
+    second: ABC ignore this_4
+  - first:
+      213: -5472956526605914593
+    second: ABC ignore this_5
+  - first:
+      213: 4789916605138323667
+    second: ABC ignore this_6
+  - first:
+      213: 8440646173947957117
+    second: ABC ignore this_7
+  - first:
+      213: 4570254898559225334
+    second: ABC ignore this_8
+  - first:
+      213: -70611558783420210
+    second: ABC ignore this_9
+  - first:
+      213: 5048388234989671233
+    second: ABC ignore this_10
+  - first:
+      213: 3449625205407726437
+    second: ABC ignore this_11
+  - first:
+      213: 1004886515504434842
+    second: ABC ignore this_12
+  - first:
+      213: 5424007106313525046
+    second: ABC ignore this_13
+  - first:
+      213: -5250164631925825513
+    second: ABC ignore this_14
+  - first:
+      213: -9127271194634392369
+    second: ABC ignore this_15
+  - first:
+      213: -1310865240351079285
+    second: ABC ignore this_16
+  - first:
+      213: -1047607991103290876
+    second: ABC ignore this_17
+  - first:
+      213: 1188405883919612994
+    second: ABC ignore this_18
+  - first:
+      213: 633241339481979466
+    second: ABC ignore this_19
+  - first:
+      213: -2922492793985018833
+    second: ABC ignore this_20
+  - first:
+      213: -1770686961894346861
+    second: ABC ignore this_21
+  - first:
+      213: -28237632473742015
+    second: ABC ignore this_22
+  - first:
+      213: 8318220238189787874
+    second: ABC ignore this_23
+  - first:
+      213: 7820885608033881317
+    second: ABC ignore this_24
+  - first:
+      213: -5666374331085699207
+    second: ABC ignore this_25
+  - first:
+      213: 8959135727630178958
+    second: ABC ignore this_26
+  - first:
+      213: -3200142402871594174
+    second: ABC ignore this_27
+  - first:
+      213: 7475559551230890773
+    second: ABC ignore this_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ABC ignore this_0
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 521
+        width: 16
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f92e1fac1e43bb390800000000000000
+      internalID: -7801583785112116577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_1
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 549
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b2786de4c0612990800000000000000
+      internalID: -7412537112762223949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_2
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 529
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43b699b3972d1eeb0800000000000000
+      internalID: -4692237918610560204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_3
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 521
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8028b0deffcbf5340800000000000000
+      internalID: 4854806730708320776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_4
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 525
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0b2949180df1cf10800000000000000
+      internalID: 2288388296906713870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_5
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 525
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1eaf7839072c04b0800000000000000
+      internalID: -5472956526605914593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_6
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 521
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d8c30936c3397240800000000000000
+      internalID: 4789916605138323667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_7
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 525
+        width: 36
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7f8de889f2332570800000000000000
+      internalID: 8440646173947957117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_8
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 541
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fd8c91bd9ecc6f30800000000000000
+      internalID: 4570254898559225334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_9
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 457
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec87da15923250ff0800000000000000
+      internalID: -70611558783420210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_10
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 457
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14312da2a5a7f0640800000000000000
+      internalID: 5048388234989671233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_11
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 481
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56bbf80f8d78fdf20800000000000000
+      internalID: 3449625205407726437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_12
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 465
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9ec83436f212fd00800000000000000
+      internalID: 1004886515504434842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_13
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 477
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 637130fb9b1f54b40800000000000000
+      internalID: 5424007106313525046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_14
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 457
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 710edb5751ba327b0800000000000000
+      internalID: -5250164631925825513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_15
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 461
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcc6923f43b655180800000000000000
+      internalID: -9127271194634392369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_16
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 461
+        width: 24
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b848778520fdecde0800000000000000
+      internalID: -1310865240351079285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_17
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 457
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4028d6225162671f0800000000000000
+      internalID: -1047607991103290876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_18
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 461
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24c3300ead01e7010800000000000000
+      internalID: 1188405883919612994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_19
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 397
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4a7ae8a4a9b9c800800000000000000
+      internalID: 633241339481979466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_20
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 397
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2452e3b9483177d0800000000000000
+      internalID: -2922492793985018833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_21
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 397
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39f2fd3f6914d67e0800000000000000
+      internalID: -1770686961894346861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_22
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 397
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 145ca1bd50eab9ff0800000000000000
+      internalID: -28237632473742015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_23
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 397
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ea74cc1c31407370800000000000000
+      internalID: 8318220238189787874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_24
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 397
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ec03df060e598c60800000000000000
+      internalID: 7820885608033881317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_25
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 397
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 977ce3f419efc51b0800000000000000
+      internalID: -5666374331085699207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_26
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 397
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8a58eb0a7e355c70800000000000000
+      internalID: 8959135727630178958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_27
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 401
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2437c2e807fc693d0800000000000000
+      internalID: -3200142402871594174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_28
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 405
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 513556cfdc58eb760800000000000000
+      internalID: 7475559551230890773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_29
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 333
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c794cd955801214ab99aa85d6331500
+      internalID: -1087527226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_30
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 341
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a33bb6b17b3da545a18b7df629b80dd
+      internalID: -1226780674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_31
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 333
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9471b11c05e248e40a725b12c638b42d
+      internalID: 69602785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_32
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 333
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49edcb8e4d447cd40b37c4a931f629d0
+      internalID: 1459788595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_33
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 353
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38953fe0ec7119a44a8542d5e04d84c9
+      internalID: 698545587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_34
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 353
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7beb8bc2e83024444bd71b362907a506
+      internalID: -424116189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_35
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 349
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec90b7680e3b4f540bca54ffa9417b5e
+      internalID: 482934476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_36
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 329
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d81c3928336f554e95532cde0bae4fd
+      internalID: 1836169322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_37
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 333
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f202114f27d0d7a48bb59e2881a8f515
+      internalID: 1667867833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_38
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 333
+        width: 36
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c288a0bd488ee044aec65b5c0fc2ec1
+      internalID: -1565294555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_39
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 269
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52ab06a612a511d4f8a02ec4eda8959f
+      internalID: 895936989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_40
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 269
+        width: 33
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04534761c0dbdc0429e5ed0f69423241
+      internalID: 420255840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_41
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 269
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29495bf4e7abc754b9e47bd728c1553b
+      internalID: -972379375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_42
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 269
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9d9ab827a659e34c85777e591a33510
+      internalID: 1075648832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_43
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 269
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34795cf3045dd70469aa1495f65c159a
+      internalID: 1714008422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_44
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 269
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85dfa5293eefb4743bae09cd47435a19
+      internalID: -2120878456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_45
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 269
+        width: 16
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f00d4662b68a684ba83e7a5f145115c
+      internalID: 938598559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_46
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 265
+        width: 28
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 068ce4eefe618e1469c13f8de049fc2b
+      internalID: -1398358177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_47
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 269
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aeeb40101f5afe4bb4d410d3f75329c
+      internalID: 827055690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_48
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 269
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a004c6c54ab6a41468a577c692de9d11
+      internalID: 1752238177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_49
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 205
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7117eed46345b184d9c8870afd2c0711
+      internalID: 2109637195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_50
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 205
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd057d04d977804c9cf6fad91314d1b
+      internalID: 1169908301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_51
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 205
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bf3011e199576446953353f77c9d181
+      internalID: 879145484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_52
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 205
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39f8c4287d8ecc646917372ed081e92a
+      internalID: -1289246285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_53
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 205
+        width: 36
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6844c68a4c6dbd42bb1fc0bde5e01cb
+      internalID: -1849063620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_54
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 205
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18768f083f30a5c48b165bd2fbfada1a
+      internalID: 1417770617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_55
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 205
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35be49beb0c2a50439bdb20c688bf858
+      internalID: 211842453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_56
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 205
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc7a6e0198dfc424b909f0b39752f856
+      internalID: -1997088058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_57
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 205
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 645aa2cbeee0b0f4f9a6103ee772eb06
+      internalID: -1990654323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_58
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 205
+        width: 36
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66cb85dc2b266144b9a0ed03b6059723
+      internalID: 1843003360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_59
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 142
+        width: 40
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 223805b55fb51fb49b83cce2269b4831
+      internalID: -134739312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_60
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 141
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db49280c7b029a44b52953bb55bae6e
+      internalID: 888682075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_61
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 141
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e674a99ee9d33fa44afa3a26e206aa72
+      internalID: 1570515826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_62
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 141
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 750739bef27449943b8ee53457e974d6
+      internalID: 1608760430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_63
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 137
+        width: 16
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18321578b5c663642a5597f745a63312
+      internalID: -626531944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_64
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 153
+        width: 40
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea045de338293f44a230133cc12b1f8
+      internalID: -969342516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_65
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 137
+        width: 20
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a48098a808237849b66a8ee55003f85
+      internalID: 291345960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_66
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 137
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7041ca2b0c8b50d46a2fb133233692df
+      internalID: 898609047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_67
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 137
+        width: 20
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc21e382865b5e04ea3ea0816ce98cbc
+      internalID: 1183683083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ABC ignore this_68
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 130
+        width: 32
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0f6d3fcd60ae1e4fa54980b001e10e3
+      internalID: 1038798629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 06db26a8197619f47ad261de3e7e0461
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      ABC ignore this_0: -7801583785112116577
+      ABC ignore this_1: -7412537112762223949
+      ABC ignore this_10: 5048388234989671233
+      ABC ignore this_11: 3449625205407726437
+      ABC ignore this_12: 1004886515504434842
+      ABC ignore this_13: 5424007106313525046
+      ABC ignore this_14: -5250164631925825513
+      ABC ignore this_15: -9127271194634392369
+      ABC ignore this_16: -1310865240351079285
+      ABC ignore this_17: -1047607991103290876
+      ABC ignore this_18: 1188405883919612994
+      ABC ignore this_19: 633241339481979466
+      ABC ignore this_2: -4692237918610560204
+      ABC ignore this_20: -2922492793985018833
+      ABC ignore this_21: -1770686961894346861
+      ABC ignore this_22: -28237632473742015
+      ABC ignore this_23: 8318220238189787874
+      ABC ignore this_24: 7820885608033881317
+      ABC ignore this_25: -5666374331085699207
+      ABC ignore this_26: 8959135727630178958
+      ABC ignore this_27: -3200142402871594174
+      ABC ignore this_28: 7475559551230890773
+      ABC ignore this_29: -1087527226
+      ABC ignore this_3: 4854806730708320776
+      ABC ignore this_30: -1226780674
+      ABC ignore this_31: 69602785
+      ABC ignore this_32: 1459788595
+      ABC ignore this_33: 698545587
+      ABC ignore this_34: -424116189
+      ABC ignore this_35: 482934476
+      ABC ignore this_36: 1836169322
+      ABC ignore this_37: 1667867833
+      ABC ignore this_38: -1565294555
+      ABC ignore this_39: 895936989
+      ABC ignore this_4: 2288388296906713870
+      ABC ignore this_40: 420255840
+      ABC ignore this_41: -972379375
+      ABC ignore this_42: 1075648832
+      ABC ignore this_43: 1714008422
+      ABC ignore this_44: -2120878456
+      ABC ignore this_45: 938598559
+      ABC ignore this_46: -1398358177
+      ABC ignore this_47: 827055690
+      ABC ignore this_48: 1752238177
+      ABC ignore this_49: 2109637195
+      ABC ignore this_5: -5472956526605914593
+      ABC ignore this_50: 1169908301
+      ABC ignore this_51: 879145484
+      ABC ignore this_52: -1289246285
+      ABC ignore this_53: -1849063620
+      ABC ignore this_54: 1417770617
+      ABC ignore this_55: 211842453
+      ABC ignore this_56: -1997088058
+      ABC ignore this_57: -1990654323
+      ABC ignore this_58: 1843003360
+      ABC ignore this_59: -134739312
+      ABC ignore this_6: 4789916605138323667
+      ABC ignore this_60: 888682075
+      ABC ignore this_61: 1570515826
+      ABC ignore this_62: 1608760430
+      ABC ignore this_63: -626531944
+      ABC ignore this_64: -969342516
+      ABC ignore this_65: 291345960
+      ABC ignore this_66: 898609047
+      ABC ignore this_67: 1183683083
+      ABC ignore this_68: 1038798629
+      ABC ignore this_7: 8440646173947957117
+      ABC ignore this_8: 4570254898559225334
+      ABC ignore this_9: -70611558783420210
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

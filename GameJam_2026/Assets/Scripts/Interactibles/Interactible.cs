@@ -57,7 +57,7 @@ public abstract class Interactible : MonoBehaviour
             interactionTimer = interactionCooldown;
             if (textOnInteract != "")
             {   
-                Debug.Log(textOnInteract);
+                UIManager.Instance.RequestDisplayClueText(textOnInteract, transform);
             }
 
             return true;

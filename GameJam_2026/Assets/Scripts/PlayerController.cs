@@ -207,7 +207,16 @@ public class PlayerController : MonoBehaviour
             Vector2 point = transform.position + (dashDistance * animatorDirection);
             point += box.offset;
             Vector2 hitboxSize = box.size - new Vector2(0.05f, 0.05f);
-            if (!Physics2D.OverlapBox(point, hitboxSize, 0.0f))
+            bool hit = false;
+            Collider2D[] results = Physics2D.OverlapBoxAll(point, hitboxSize, 0.0f);
+            foreach (Collider2D c2d in results)
+            {
+                if (!c2d.isTrigger)
+                {
+                    hit = true;
+                }
+            }
+            if (!hit)
             {
                 //start dash
                 AnimationDirectionCheck("Dash");
