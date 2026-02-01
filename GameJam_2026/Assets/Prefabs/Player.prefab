@@ -453,13 +453,17 @@ PrefabInstance:
       propertyPath: InitialModule.startColor.maxColor.r
       value: 0.4345263
       objectReference: {fileID: 0}
+    - target: {fileID: 2151523165161254770, guid: 999cff140c5ba0a42a64fe05aa1f0034, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 5049925613930141461, guid: 999cff140c5ba0a42a64fe05aa1f0034, type: 3}
       propertyPath: m_Name
       value: GhostMaskParticle
       objectReference: {fileID: 0}
     - target: {fileID: 5049925613930141461, guid: 999cff140c5ba0a42a64fe05aa1f0034, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8392227242441267711, guid: 999cff140c5ba0a42a64fe05aa1f0034, type: 3}
       propertyPath: m_LocalPosition.x

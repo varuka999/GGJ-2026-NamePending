@@ -1621,6 +1621,7 @@ MonoBehaviour:
   visibleOutsideDetective: 1
   hideAfterInteract: 0
   nonInteractible: 0
+  revealWhenActive: 0
   nextClues:
   - {fileID: 833955573}
 --- !u!50 &556415621
@@ -2522,6 +2523,7 @@ MonoBehaviour:
   visibleOutsideDetective: 1
   hideAfterInteract: 0
   nonInteractible: 0
+  revealWhenActive: 0
   nextClues:
   - {fileID: 1742270693}
 --- !u!50 &833955574
@@ -2853,6 +2855,7 @@ MonoBehaviour:
   visibleOutsideDetective: 1
   hideAfterInteract: 0
   nonInteractible: 0
+  revealWhenActive: 0
   nextClues:
   - {fileID: 556415620}
 --- !u!1 &1102830471
@@ -4380,6 +4383,63 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.5, y: 1.4375}
   m_EdgeRadius: 0
+--- !u!1001 &1296327435
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4861940093128673344, guid: bc3efb3305a288d4797f8130dc501337, type: 3}
+      propertyPath: m_Name
+      value: GhostMask
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012671009919797282, guid: bc3efb3305a288d4797f8130dc501337, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.1923878
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012671009919797282, guid: bc3efb3305a288d4797f8130dc501337, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.8959237
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012671009919797282, guid: bc3efb3305a288d4797f8130dc501337, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012671009919797282, guid: bc3efb3305a288d4797f8130dc501337, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012671009919797282, guid: bc3efb3305a288d4797f8130dc501337, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012671009919797282, guid: bc3efb3305a288d4797f8130dc501337, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012671009919797282, guid: bc3efb3305a288d4797f8130dc501337, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012671009919797282, guid: bc3efb3305a288d4797f8130dc501337, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012671009919797282, guid: bc3efb3305a288d4797f8130dc501337, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012671009919797282, guid: bc3efb3305a288d4797f8130dc501337, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bc3efb3305a288d4797f8130dc501337, type: 3}
 --- !u!1 &1425847359
 GameObject:
   m_ObjectHideFlags: 0
@@ -4643,6 +4703,7 @@ MonoBehaviour:
   visibleOutsideDetective: 0
   hideAfterInteract: 0
   nonInteractible: 1
+  revealWhenActive: 0
 --- !u!1 &1703730194
 GameObject:
   m_ObjectHideFlags: 0
@@ -5123,6 +5184,7 @@ MonoBehaviour:
   visibleOutsideDetective: 1
   hideAfterInteract: 0
   nonInteractible: 0
+  revealWhenActive: 0
   toggleObjects:
   - {fileID: 656752712}
 --- !u!1 &1752140708
@@ -5451,3 +5513,4 @@ SceneRoots:
   - {fileID: 801493876}
   - {fileID: 1703730197}
   - {fileID: 8457250606224180953}
+  - {fileID: 1296327435}
