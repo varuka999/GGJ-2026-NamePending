@@ -48,6 +48,11 @@ public class GameManager : MonoBehaviour
     {
         detectiveView = view;
         Grayscale(detectiveView);
+
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.ToggleClueText(view);
+        }
     }
 
     void SetGlobalMaterial()

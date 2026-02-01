@@ -5,14 +5,15 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public static UIManager instance = null;
+    static UIManager instance = null;
     static public UIManager Instance { get { return instance; } }
 
-    public event Action<string, Transform> DisplayClueTextEvent;
     [SerializeField] private GameObject canvasPrefab;
     [SerializeField] private GameObject uiControlsParent;
     [SerializeField] private TMP_Text displayText = null;
     [SerializeField] private TMP_Text abilityText = null;
+
+    private List<TMP_Text> clueTexts = new List<TMP_Text>();
 
     public void Awake()
     {
@@ -24,26 +25,21 @@ public class UIManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        //DisplayClueTextEvent += DisplayClueText;
-    }
-
-    private void OnDisable()
-    {
-        //DisplayClueTextEvent -= DisplayClueText;
     }
 
     public void RequestDisplayClueText(string clueString, Transform clue)
     {
-        //DisplayClueTextEvent?.Invoke(clueString, clue);
         DisplayClueText(clueString, clue);
     }
 
     public void DisplayClueText(string clueString, Transform clue)
     {
-        TMP_Text textToDisplay = Instantiate(displayText, clue.transform);
-        //textToDisplay.transform.position = Camera.main.WorldToScreenPoint(clue.position) + new Vector3(50.0f, 50.0f, 0f);
+        TMP_Text textToDisplay = Instantiate(displayText);
+        textToDisplay.transform.position = (clue.position);
+        textToDisplay.transform.parent = clue;
         textToDisplay.text = clueString;
+
+        clueTexts.Add(textToDisplay);
     }
 
     public void ToggleUIControls(int maskIndex)
@@ -51,20 +47,28 @@ public class UIManager : MonoBehaviour
         uiControlsParent.SetActive(!uiControlsParent.activeSelf);
     }
 
-    public void UpdateControlsText(int maskIndex)
+    public void UpdateControlsText(MaskType mask)
     {
         Debug.Log("updated controls text");
         abilityText.text = "(Space) ";
-        switch (maskIndex)
+        switch (mask)
         {
-            case 0:
+            case MaskType.Detective:
                 abilityText.text += "Detective Vision";
                 break;
-            case 1:
+            case MaskType.Ghost:
                 abilityText.text += "Ghost Dash";
                 break;
             default:
                 break;
+        }
+    }
+
+    public void ToggleClueText(bool mode)
+    {
+        foreach (TMP_Text clue in clueTexts)
+        {
+            clue.gameObject.SetActive(mode);
         }
     }
 }
